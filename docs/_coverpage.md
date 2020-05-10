@@ -1,4 +1,4 @@
-![logo](_media/aithinker.png)
+![logo](docs/_media/aithinker.png)
 
 # **AiClouds 3.0**
 
