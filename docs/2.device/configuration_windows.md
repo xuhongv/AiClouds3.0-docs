@@ -14,20 +14,40 @@
 
 # 二 下载 IDE V1.5
 
-我们已经封装了 `ESP8266/ESP32` 的 GUI 开发环境，您只需要下载无脑式安装即可；
+&nbsp;&nbsp;&nbsp;&nbsp; 最近的百度网pan的下载速度一度再下降，为了换个方式存储IDE，所以，我们放在了群文件(最下面有加群方式)里面了。不过安装前，务必注意：
 
-安装完毕之后，我们需要添加几个环境变量到系统，下面路径根据您的安装路径有所改变：
+&nbsp;&nbsp;&nbsp;&nbsp; **第一点**：因为新版的IDE安装过程中会给电脑配置环境变量，所以，安装了**0.5或1.0**版本的朋友，请主动自行在电脑环境变量删除有关的`PATH`变量值，包含 `AiThinkerIDE_V1.0` 关键字的，比如：
 
 ```C
+Ai-Thinker\AiThinkerIDE_V1.0\msys32\mingw32\bin
+```
+&nbsp;&nbsp;&nbsp;&nbsp; **第二点**：如果是采用我司的**0.5或1.0**版本来开发的项目，需自行删除工程根目录的 **.setting** 这个文件夹，因为他里面包含一些就旧工程配置。
+
+&nbsp;&nbsp;&nbsp;&nbsp; **第三点**：环境依赖的是 python2.8 环境，而且 IDE （gui 环境）自带了 python2.8的环境的，如果你电脑有 py3 的环境，建议卸载或共存处理；
+
+---------------------------------
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; 安装路径不要带中文字符或带空格:
+
+![22](../_media/quick/path_set_note.png)
+
+
+-----------------
+
+&nbsp;&nbsp;&nbsp;&nbsp; 最后，我们再次检查是否会自动添加环境变量，可以在电脑环境系统PATH变量查看仅有这几个数值即可：
+
+```c
 IDE安装路径\msys32\mingw32\bin
 IDE安装路径\WinMY\msys32\usr\bin
 IDE安装路径\WinMY\msys32\opt\esp8266\v5.2.0_for_3.0\xtensa-lx106-elf\bin
 IDE安装路径\WinMY\msys32\opt\esp32\xtensa-esp32-elf-5.0\bin
 ```
 
-最后可以在电脑环境变量查看:
 
 ![22](../_media/quick/path_set.png)
+
+-------------
 
 # 三 编译一个 RTOS 操作系统代码
 
@@ -101,3 +121,109 @@ git clone --recursive https://gitee.com/xuhongv/AiThinkerProjectForESP.git
 &nbsp;&nbsp;&nbsp;&nbsp; 烧录完毕之后，日志打印会如下所示（忽略文件夹名字）：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200212162050191.png)
+
+# 四 编译 NONOS SDK V3.0/2.1.x/2.2.x版本
+
+- 事前确定电脑环境变量是否成功`PATH`配置了如下变量(根据自己电脑路径有所差异)：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512170449227.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;因为很多小伙伴在玩无操作系统开发（简称 **NONOS SDK**），而此 SDK 网上有2大版本流行，分别是 3.0 为一个划分界限，而我们的IDE也支持这样的开发兼容，下面先给大家讲解如何编译**NONOS 3.0 SDK**的！经测试，从仓库下载的下载的 **2.2.x** 和 **2.1.x** 分支，都可以用这个环境编译！
+
+&nbsp;&nbsp;&nbsp;&nbsp;如果你的工程较久的话，直接参考下一节的配置。
+
+&nbsp;&nbsp;&nbsp;&nbsp;首先克隆代码，这里我依然选择为用  `git` 拉取：
+```C
+git clone https://gitee.com/xuhongv/ESP8266_NONOS_SDK
+```
+### 导入步骤：
+
+ 1. 手动删除根目录下的```driver_lib```和 ```third_party```这2个文件夹；
+ 2. 然后点击C/C++分支，选择 `Existing Code as MakeFile Project` 工程;
+ 3. 复制刚刚下载文件的 `ESP8266_NONOS_SDK`的路径，import -->  Cross Gcc , 并且去掉对应的 C++ 勾勾；如下动图所示：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200211180453997.gif)
+
+---------
+
+### 编译步骤：
+
+ 1. 项目属性设置，鼠标选中项目名称右键点击，在右侧菜单中选择Properties ；
+ 2. 选择Properties --> C/C++ Build --> Build command 中添加编译规则，当前硬件是 32Mbit的模块，所以这样填：( `make COMPILE=gcc BOOT=none APP=0 SPI_SPEED=40 SPI_MODE=DIO SPI_SIZE_MAP=6` )；
+ 3. 在Properties --> C/C++ Build --> Build directory 选择编译的工程路径，比如根目录下的 IoT_Demo工程。
+ 4. 然后，就可以 清理工程 `clean Project` 和编译工程 `build Project` 了；
+ 5. 控制台输出只保留 Console ，其他一律关闭！
+
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200211182427313.gif)
+
+- 编译成功之后，从控制台看到：
+
+```c
+!!!
+No boot needed.
+Generate eagle.flash.bin and eagle.irom0text.bin successully in folder bin.
+eagle.flash.bin-------->0x00000
+eagle.irom0text.bin---->0x10000
+!!!
+```
+
+------------------------
+
+### 烧录
+
+&nbsp;&nbsp;&nbsp;&nbsp;从官方下载烧录工具，插上安信可出的 nodemcu 模块，选择各个 bin 文件，如下的配置，先 `ERASE` ，再 `START` 即可：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200212140403889.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp; 默认的打印波特率 74880 ，那么我们的电脑串口软件要支持 74880，下面以 SmarTTY 软件为例，如下打印，表示运行成功！
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200212140921601.png)
+
+# 五、编译 NONOS SDK V2.0 版本或以下
+
+&nbsp;&nbsp;&nbsp;&nbsp;上面已经讲解了如何编译 **3.0/2.2x/2.1.x**版本或以上的，这里就讲解如何编译**2.0**或更旧版本之间的代码。具体的工程也不再维护了，大家手上的应该是较久的一些版本把，比如技新课堂的教程工程等；
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;我们先下载一个压缩包 `plugin_cywin` 解压到安装目录，**导入前，务必更改环境变量**，在电脑的环境变量操作如下：
+- **在PATH添加以下的环境变量**：
+
+```
+D:\Ai-Thinker_V1.5\plugin_cywin\bin
+D:\Ai-Thinker_V1.5\msys32\opt\esp8266\v4.8.2_for_2.0\bin
+```
+- **在PATH删除以下的环境变量**：
+
+```
+D:\Ai-Thinker_V1.5\msys32\opt\esp8266\v5.2.0_for_3.0\xtensa-lx106-elf\bin
+D:\Ai-Thinker_V1.5\msys32\mingw32\bin
+D:\Ai-Thinker_V1.5\msys32\opt\esp32\xtensa-esp32-elf-5.0\bin
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;之后，重启打开 eclipse 软件，导入步骤和编译步骤和之前的和导入 **Non OS 3.0**版本的一样！修改后的路径如此：
+
+
+![在这里插入图片描述](../_media/quick/path_set_nonos_2.0.png)
+
+
+
+
+# 六、常见问题
+
+## Q1 编译`gen_appbin.py`文件报错
+
+```
+"../tools/gen_appbin.py", line 55
+```
+
+- 解决方法：因为编译环境依赖的是 `py2.7` 环境，如果您的电脑是 `py3` 版本的，会造成一些语法冲突，请在eclipse编译工程的环境配置去掉 `py3` 的环境路径，再次编译即可！
+
+## Q2 编译有关`xtensa`的错误日志。
+
+- 从主分支下载的代码都是最新的编译工具链的，请确保工具链是否在eclipse编译工程的环境配置里面！比如：
+
+`~\Ai-Thinker_V1.5\msys32\opt\esp8266\v5.2.0_for_3.0\xtensa-lx106-elf\bin`
+
+## 联系方式
+
+- 扫描加钉钉交流群：
+
+![在这里插入图片描述](../_media/quick/dingding_qr.JPG ':size=300x400')

@@ -9,7 +9,7 @@
   - [2.Linux环境搭建](2.device/configuration_linux)
   - [3.【必看】关于开发模板说明](2.device/modules_esp8266/modules_des)
   - [4.ESP8266模板1-按键配网连接MQTT](2.device/modules_esp8266/modules_1_key_mqtt_esp8266.md)
-  - [5.ESP8266模板2-连接安信可AiClouds3.0]()
+  - [5.ESP8266模板2-连接安信可AiClouds3.0](2.device/modules_esp8266/modules_2_xclouds3.0_esp8266.md)
   - [6.ESP8266模板3-连接阿里云物联网平台]()
   - [7.ESP8266模板4-连接阿里飞燕平台]()
   - [8.ESP8266模板5-连接天猫精灵IoT平台]()

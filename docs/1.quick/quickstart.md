@@ -216,3 +216,10 @@ Access Token URL：https://aligenie.xuhongv.com/oauth/token
 ![upl-image-preview url=https://docs.ai-thinker.com/_media/aicloud/spec/%E7%B1%B3%E5%AE%B6%E5%90%8E%E5%8F%B0%E8%B0%83%E8%AF%95.jpg](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9kb2NzLmFpLXRoaW5rZXIuY29tL19tZWRpYS9haWNsb3VkL3NwZWMvJUU3JUIxJUIzJUU1JUFFJUI2JUU1JTkwJThFJUU1JThGJUIwJUU4JUIwJTgzJUU4JUFGJTk1LmpwZw?x-oss-process=image/format,png)
 
 - end
+
+
+# 联系方式
+
+- 扫描加钉钉交流群：
+
+![在这里插入图片描述](../_media/quick/dingding_qr.JPG ':size=300x400')
