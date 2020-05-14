@@ -15,6 +15,11 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="red" size="4">AiClouds3.0架构的出厂固件是 模板2，设备端的模块代码（模板2除外）与AiClouds3.0 架构无直接关系，均来自我司的日常整理；</font>
 
+# 扫描加钉钉交流群：
+
+![在这里插入图片描述](../_media/quick/dingding_qr.JPG ':size=300x400')
+
+
 # FAQ常见疑问
 
 - Q1：这些模板是否可以商用？
