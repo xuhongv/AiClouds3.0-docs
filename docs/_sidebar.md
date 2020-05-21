@@ -11,7 +11,7 @@
   - [4.ESP8266模板1-按键配网连接MQTT](2.device/modules_esp8266/modules_1_key_mqtt_esp8266.md)
   - [5.ESP8266模板2-连接安信可AiClouds3.0](2.device/modules_esp8266/modules_2_xclouds3.0_esp8266.md)
   - [6.ESP8266模板3-连接阿里云物联网平台]()
-  - [7.ESP8266模板4-连接阿里飞燕平台]()
+  - [7.ESP8266模板4-连接阿里飞燕平台](2.device/modules_esp8266/modules_4_living_esp8266.md)
   - [8.ESP8266模板5-连接天猫精灵IoT平台]()
   - [9.ESP8266模板6-连接中移OneNet平台]()
   - [10.ESP8266模板7-连接机智云平台]()
