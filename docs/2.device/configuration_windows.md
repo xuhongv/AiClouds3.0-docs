@@ -222,8 +222,7 @@ D:\Ai-Thinker_V1.5\msys32\opt\esp32\xtensa-esp32-elf-5.0\bin
 
 `~\Ai-Thinker_V1.5\msys32\opt\esp8266\v5.2.0_for_3.0\xtensa-lx106-elf\bin`
 
-## 联系方式
 
-- 扫描加钉钉交流群：
+# 联系方式：
 
-![在这里插入图片描述](../_media/quick/dingding_qr.JPG ':size=300x400')
+- 技术疑问请发疑问到邮箱： xuhongv@aithinker.com

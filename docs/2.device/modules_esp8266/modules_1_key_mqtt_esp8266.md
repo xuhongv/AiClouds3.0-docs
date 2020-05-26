@@ -88,8 +88,6 @@
 }
 ```
 
-# 联系方式
+# 联系方式：
 
-- 扫描加钉钉交流群：
-
-![在这里插入图片描述](../_media/quick/dingding_qr.JPG ':size=300x400')
+- 技术疑问请发疑问到邮箱： xuhongv@aithinker.com

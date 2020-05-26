@@ -338,6 +338,8 @@ static int user_property_set_event_handler(const int devid, const char *request,
 **2、架构中涉及到的技术点，我会一一公布出来以表感谢；**
 **3、同时，也欢迎大家支持我，或一起壮大这个框架，奉献你代码项目；**
 
-- 钉钉扫描二维码，加入钉钉群一起联系，干货多多，第一时间推送！
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512152613637.png)
+
+# 联系方式：
+
+- 技术疑问请发疑问到邮箱： xuhongv@aithinker.com
