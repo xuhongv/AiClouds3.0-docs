@@ -223,6 +223,13 @@ D:\Ai-Thinker_V1.5\msys32\opt\esp32\xtensa-esp32-elf-5.0\bin
 `~\Ai-Thinker_V1.5\msys32\opt\esp8266\v5.2.0_for_3.0\xtensa-lx106-elf\bin`
 
 
+## Q3 编译有关`Permission denied`的错误日志。
+
+- 因为部分win10系统，存在着不兼容环境变量情况！只需要把环境变量置顶即可解决！如下所示：
+
+
+![在这里插入图片描述](../_media/quick/py-permisson-denied.png)
+
 # 联系方式：
 
 - 技术疑问请发疑问到邮箱： xuhongv@aithinker.com
