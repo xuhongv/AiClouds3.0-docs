@@ -122,7 +122,7 @@ git clone --recursive https://gitee.com/xuhongv/AiThinkerProjectForESP.git
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200212162050191.png)
 
-# 四 编译 NONOS SDK V3.0/2.1.x/2.2.x版本
+# 四、编译 NONOS SDK V3.0/2.1.x/2.2.x版本
 
 - 事前确定电脑环境变量是否成功`PATH`配置了如下变量(根据自己电脑路径有所差异)：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200512170449227.png)
@@ -227,8 +227,22 @@ D:\Ai-Thinker_V1.5\msys32\opt\esp32\xtensa-esp32-elf-5.0\bin
 
 - 因为部分win10系统，存在着不兼容环境变量情况！只需要把环境变量置顶即可解决！如下所示：
 
+![在这里插入图片描述](../_media/quick/py-permisson-denied.png)
+
+
+## Q4 编译有关`No Target make all`的错误日志。
+
+- 这个提示是因为编译时候，在编译文件夹下面找不到 makefile 文件或者没有 make 环境；
+
+- 首先排查先确定电脑的环境变量，因为某些电脑差异导致安装ide时候，无法正常配置环境！ 如果有环境，只需要把环境变量置顶， 正确的应该如下：
 
 ![在这里插入图片描述](../_media/quick/py-permisson-denied.png)
+
+- 如果上述的还报错，麻烦重启IDE，删除工程，再次导进工程，按照步骤三再操作一次；
+
+
+
+
 
 # 联系方式：
 
