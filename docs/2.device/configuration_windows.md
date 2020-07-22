@@ -14,7 +14,7 @@
 
 # 二 下载 IDE V1.5
 
-&nbsp;&nbsp;&nbsp;&nbsp; 最近的百度网pan的下载速度一度再下降，为了换个方式存储IDE，所以，我们放在了群文件(最下面有加群方式)里面了。不过安装前，务必注意：
+&nbsp;&nbsp;&nbsp;&nbsp; 下载IDE安装包在文章最下面，安装前，务必注意：
 
 &nbsp;&nbsp;&nbsp;&nbsp; **第一点**：因为新版的IDE安装过程中会给电脑配置环境变量，所以，安装了**0.5或1.0**版本的朋友，请主动自行在电脑环境变量删除有关的`PATH`变量值，包含 `AiThinkerIDE_V1.0` 关键字的，比如：
 
@@ -241,9 +241,15 @@ D:\Ai-Thinker_V1.5\msys32\opt\esp32\xtensa-esp32-elf-5.0\bin
 - 如果上述的还报错，麻烦重启IDE，删除工程，再次导进工程，按照步骤三再操作一次；
 
 
+# IDE下载方式：
 
+- 链接：https://pan.baidu.com/s/1bk_mc-X9Aol9MgiU0gZA0A 提取码：```shm3 ```
 
 
 # 联系方式：
 
 - 技术疑问请发疑问到邮箱： xuhongv@aithinker.com
+
+- 钉钉群号：31799542 或钉钉扫描下方二维码，请凭订单号加群，自动审核！
+
+![在这里插入图片描述](../_media/quick/dingding_qr.JPG ':size=300x400')
