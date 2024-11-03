@@ -25,7 +25,7 @@
 
 ## 快速上手
 
-Check out the [Showcase](https://github.com/docsifyjs/awesome-docsify#showcase) to see docsify in use.
+Check out the [Showcase](https://github.com/docsifyjs/awesome-docsify#showcase) to see docsify in use
 
 - AiClouds 3.0服务器端开源地址：https://github.com/xuhongv/xClouds-php
 - AiClouds 3.0设备端开源地址：https://github.com/xuhongv/xClouds-device
